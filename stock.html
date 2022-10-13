@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <title>Contablito V2</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Contablito</a>
+        </div>
+        <ul class="nav navbar-nav gx-2" style="flex-direction: row;">
+            <li class="nav-item">            
+                <button class="btn btn-sm btn-outline-secondary" type="button"><a class="nav-link active" aria-current="page" style="color: black; font-weight:600" href="index.html">Registro de movimientos</a></button>
+            </li>
+            <li class="nav-item">
+            <button class="btn btn-sm btn-outline-secondary" type="button"><a class="nav-link" href="stock.html" style="color: black; font-weight:600">Control Stock</a></button>
+            </li>
+            <li class="nav-item">
+            <button class="btn btn-sm btn-outline-secondary" type="button"><a class="nav-link" href="v2.html" style="color: black; font-weight:600">V2</a></button>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">can</button></li>
+        </ul>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            ...
+        </div>
+    </div>
+</nav>
+    <div class="container-md mt-3" style="max-width: 1100px">
+      <h2 style="text-align: center;">Control de stock</h2>
+    <div class="container mt-3" style="max-width: 1080px; margin:auto">
+        <form class="form-control row g-3">
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-2">
+                    <p>Nombre</p>
+                </div>
+                <div class="col-md-2">
+                    <input class="form-control" type="input" id="name">
+                    
+                </div>
+                <div class="col-md-2">
+                    
+                </div>
+            </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-2">
+                    <p>Descripcion
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" type="input" id="description">
+                </div>
+           </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-2">
+                    <p>Etiquetas</p>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control me-2" type="text" id ='tags' placeholder="Palabras clave separadas por coma ','" aria-label="Search">
+                </div>
+            </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-2">
+                  <div class="row">
+                        <div class="col-md-7" style="padding-right: 0">
+                            <label for="stock" class="form-label">Stock Inicial</label>
+                        </div>              
+                        <div class="col-md-3" style="padding: 0">
+                            <input type="text" class="form-control" id="stock" style="font-size: small">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="row">
+                        <div class="col-md-8" style="padding-right: 0">
+                            <label for="cost" class="form-label">Costo unitario</label>
+                        </div>              
+                        <div class="col-md-4" style="padding: 0">
+                            <input type="text" class="form-control" id="cost" style="font-size: small">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3">
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            <label for="currency" class="form-label">Moneda</label>
+                        </div>              
+                        <div class="col-md-6">
+                          <select class="form-select form-select-sm" aria-label=".form-select-sm example" id='currency' name="currency" required>
+                            <option selected>Moneda</option>
+                            <option value="UYU">UYU</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                          </select>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            <div class="row g-3 justify-content-center">
+              <div class="col-md-3">
+                <div class="row">
+                  <div class="col-md-8" style="padding-right: 0">
+                      <label for="margin" class="form-label">Margen de alerta</label>
+                  </div>              
+                  <div class="col-md-3" style="padding: 0">
+                      <input type="text" class="form-control" id="margin" style="font-size: small">
+                  </div>
+                </div>
+
+              </div>
+              
+          </div>   
+            <div class="row g-3 justify-content-center ">
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" style="width: 100px;" id="addStock">Guardar</button>
+                </div>
+            </div>            
+        </form>
+    </div>
+        
+        <table class="table table-secondary table-bordered table-hover mt-3">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Costo unitario</th>
+                <th scope="col">Moneda</th>
+              </tr>
+            </thead>
+            <tbody id = 'stockTable'>
+              
+            </tbody>
+          </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/stock.js"></script>
+</body>
+</html>

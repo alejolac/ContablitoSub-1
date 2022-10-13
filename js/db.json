@@ -1,0 +1,63 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "name":"Ladrillo Colorado",
+            "description":"Material para uso varios de construccion",
+            "tags":["ladrillo", "naranja", "construccion"],
+            "stock": 50,
+            "cost": 15,
+            "currency": "UYU",
+            "margin": 20          
+
+        },
+
+        {
+            "id": 2,
+            "name":"Bloque Yeso",
+            "description":"Material para uso varios de construccion",
+            "tags":["bloque", "yeso", "construccion", "obra"],
+            "stock": 75,
+            "cost": 30,
+            "currency": "UYU",
+            "margin": 20          
+
+        },
+
+        {
+            "id": 3,
+            "name":"Alambre galvanizado kg",
+            "description":"Material maleable y resistente",
+            "tags":["metal", "alambrado", "obra", "hierro"],
+            "stock": 100,
+            "cost": 200,
+            "currency": "UYU",
+            "margin": 20          
+
+        },
+        
+        {
+            "id": 4,
+            "name":"Arena terciada mt3",
+            "description":"Complemento de obra",
+            "tags":["complemento", "arena", "construccion", "obra"],
+            "stock": 100,
+            "cost":  1000,
+            "currency": "UYU",
+            "margin": 20         
+
+        },
+
+        {
+            "id": 5,
+            "name":"Tablas MDF",
+            "description":"Tabla de complementos MDF",
+            "tags":["madera", "tabla", "mdf", "hogar", "obra"],
+            "stock": 25,
+            "cost": 600,
+            "currency": "UYU",
+            "margin": 20          
+
+        }
+    ]    
+}

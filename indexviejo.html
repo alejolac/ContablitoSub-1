@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contabilito</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <div class="container">
+        <h1 id ='title' style="text-align: center;">Contabilito</h1>
+        <form action="">
+        <div class="item">
+            <p class="concept">Descripcion</p>
+            <p>
+                <input type="text" id="descripcion" name="descripcion" required>
+            </p>
+        </div>
+        <div class="item">
+            <p class="concept">Tipo transaccion</p>
+            <p>
+                <input type="radio" id = 'Compra' name = 'transaccion' value="Compra" required>
+                <label for="Compra">Compra</label>
+                <input type="radio" id ='Venta' name="transaccion" value="Venta" required>
+                <label for="Venta">Venta</label>
+            </p>
+        </div>
+        <div class="item">
+            <p class="concept">Tipo IVA</p>
+            <p><input type="radio" id ="Basico" name = 'iva' value="b" required>
+                <label for="Basico">Basico</label>
+                <input type="radio" id ="Minimo" name = 'iva' value="m" required>
+                <label for="Minimo">Minimo</label>
+                <input type="radio" id ="Exento" name = 'iva' value="e" required>
+                <label for="Exento">Exento</label>
+            </p>
+        </div>
+        <div class="item">
+            <p class="concept">Subtotal</p>
+            <p id = 'subt'>
+                <input type="text" name="subtotal" id="subtotal" required>
+                <button type="submit">Ingresar</button>
+            </p>
+        </div>
+        </form>
+        <table bgcolor="black" width = '500' id="article-container">
+            <tr bgcolor="lightgrey" height = 30>
+                <th>Descripcion</th>
+                <th>Tipo</th>
+                <th>Subtotal($)</th>
+                <th>IVA($)</th>
+                <th>Total (IVA inc)</th>
+            </tr>
+            <!--
+            <tr bgcolor="white" height="30">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            -->            
+        </table>
+        <div class="calculos">
+            <p>Total Ventas: <span id="totalV">$ 0</span></p>
+            <p>Total Compras: <span id="totalC">$ 0</span></p>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

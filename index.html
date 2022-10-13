@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <title>Contablito V2</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Contablito</a>
+        </div>
+        <ul class="nav navbar-nav gx-2" style="flex-direction: row;">
+            <li class="nav-item">            
+                <button class="btn btn-sm btn-outline-secondary" type="button"><a class="nav-link active" aria-current="page" style="color: black; font-weight:600" href="index.html">Registro de movimientos</a></button>
+            </li>
+            <li class="nav-item">
+            <button class="btn btn-sm btn-outline-secondary" type="button"><a class="nav-link" href="stock.html" style="color: black; font-weight:600">Control Stock</a></button>
+            </li>
+            <li class="nav-item">
+            <button class="btn btn-sm btn-outline-secondary" type="button"><a class="nav-link" href="v2.html" style="color: black; font-weight:600">V2</a></button>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">can</button></li>
+        </ul>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            ...
+        </div>
+    </div>
+</nav>
+  <div class="container-md mt-3" style="max-width: 1100px">
+    <h2 style="text-align: center;">Registro de movimientos</h2>
+  <div class="container mt-3" style="max-width: 1080px; margin:auto">
+        <form class="form-control row g-3" id="transactForm">
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-2">
+                    <p>Tipo de transaccion</p>
+                </div>
+                <div class="col-md-2">
+                    <input class="form-check-input" type="radio" name="type" id="buy" value="Compra" required required>
+                    <label class="form-check-label" for="buy">
+                        Compra
+                    </label>
+                </div>
+                <div class="col-md-2">
+                    <input class="form-check-input" type="radio" name="type" id="sell" value="Venta" required required>
+                    <label class="form-check-label" for="sell">
+                        Venta
+                    </label>
+                </div>
+            </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-2">
+                    <p>Fecha de transaccion</p>
+                </div>
+                <div class="col-md-2">
+                    <input type="date" class="form-control" id="inputAddress2" name="date" placeholder="Apartment, studio, or floor" required>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-2">
+                    <p>Producto</p>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control me-2" name="idprod" type="text" placeholder="ID:Producto" aria-label="Search" required>
+                </div>
+            </div>
+            <div class="row g-3">
+                
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                          <div class="row">
+                            <div class="col-md-2">
+                                <div class="list-group-item list-group-item-action cursor-active">
+                                    
+                                      ID:Producto
+                                    
+                                  </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <div class="card-body">
+                                      ID:Producto
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <div class="card-body">
+                                      ID:Producto
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <div class="card-body">
+                                      ID:Producto
+                                    </div>
+                                  </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                
+            </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-2">
+                  <div class="row">
+                    <div class="col-md-4" style="padding-right: 0">
+                      <label for="ivaType" class="form-label">IVA</label>
+                    </div>              
+                    <div class="col-md-7" style="padding: 0">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" id='ivaType' name="ivaType" required>
+                        <option selected>IVA</option>
+                        <option value="22">22%</option>
+                        <option value="10">10%</option>
+                        <option value="1">Exento</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  
+                </div>
+                <div class="col-md-2">
+                    <div class="row">
+                        <div class="col-md-8" style="padding-right: 0">
+                            <label for="inputZip" class="form-label">Costo unitario</label>
+                        </div>              
+                        <div class="col-md-4" style="padding: 0">
+                            <input type="text" class="form-control" name="cost" id="inputZip" style="font-size: small" required>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-2">
+                    <div class="row justify-content-end">
+                        <div class="col-md-5">
+                            <label for="inputZip" class="form-label">Cantidad</label>
+                        </div>              
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" name="stock" id="inputZip" style="font-size: small" required>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            <div class="row g-3 justify-content-center ">
+                <div class="col-md-2">
+                    <button type="submit" id="sendTransac" class="btn btn-primary" style="width: 100px;">Enviar</button>
+                </div>
+            </div>            
+        </form>
+    </div>
+        
+        <table class="table table-secondary table-bordered table-hover mt-3">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Tipo transaccion</th>
+                <th scope="col">Cant</th>
+                <th scope="col">Costo</th>
+                <th scope="col">SubTotal</th>
+                <th scope="col">IVA</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="transactTable">
+
+            </tbody>
+          </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
