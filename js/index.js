@@ -39,7 +39,7 @@ function showTrasanction(date, type, idprod, cost, stock, ivaType){
     </tr>
     `
     for(product of products){
-        if(product['id']== parseInt(id )){
+        if(product['id']== parseInt(id)){
             if(type == 'Compra'){
                 product['stock'] = parseInt(product['stock']) + parseInt(stock);
             }else{
