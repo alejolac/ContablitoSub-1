@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
         products = productsArray.products
     }
     
-
     for(prod of products){
         const {id, name, description, stock, cost, currency} = prod
         showProducts(id, name, description, stock, cost, currency)
